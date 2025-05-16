@@ -104,6 +104,7 @@ export const checkoutSuccess = async (req, res) => {
 
 
 async function createCoupon(userId) {
+  await Coupon.findOneAndDelete({userId})
   try {
     const newCoupon = new Coupon({
       code: "GIFT" + Math.random().toString(36).substring(2, 8).toUpperCase(),
