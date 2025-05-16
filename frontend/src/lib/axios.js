@@ -1,8 +1,7 @@
 import axios from "axios";
-import { baseURL} from "../lib/url.js"
 const axiosInstance = axios.create({
-    baseURL: baseURL,
-    withCredentials: true // send the cokkie to the server
+	baseURL: import.meta.mode === "development" ? "http://localhost:5000/api" : "/api",
+	withCredentials: true, // send cookies to the server
 });
 
 export default axiosInstance;
