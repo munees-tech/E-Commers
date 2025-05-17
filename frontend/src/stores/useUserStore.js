@@ -62,7 +62,7 @@ export const useUserStore = create((set, get) => ({
         }
     },
 
-    refreshToken: async () => {
+   /*  refreshToken: async () => {
         if (get().checkingAuth) return;
         set({ checkingAuth: true });
         try {
@@ -74,13 +74,13 @@ export const useUserStore = create((set, get) => ({
             set({ user: null, checkingAuth: false });
             throw error;
         }
-    }
+    } */
 
 
 }));
 
 
-let refreshPromise = null;
+/* let refreshPromise = null;
 
 axios.interceptors.response.use(
     (response) => response,
@@ -109,4 +109,4 @@ axios.interceptors.response.use(
             }
         }
         return Promise.reject(error);
-    })
+    }) */

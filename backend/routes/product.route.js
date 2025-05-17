@@ -6,12 +6,12 @@ import {productRoute ,adminRoute} from "../middlewere/auth.middlewere.js";
 
 const router = express.Router()
 
-router.get("/" , productRoute , adminRoute  , getAllProducts);
-router.get("/featured" , getFeaturedProducts);
-router.get("/category/:category" , getCatogroyProducts);
-router.get("/recommendations", getAllRecommendation);
+router.get("/" , productRoute , adminRoute  , getAllProducts)
+router.get("/featured" , getFeaturedProducts)
+router.get("/category/:category" , getCatogroyProducts)
+router.get("/recommendations", getAllRecommendation)
 router.post("/", productRoute , adminRoute , createProduct)
 router.patch("/:id", productRoute , adminRoute , toogleFeaturedProducts)
 router.delete("/:id", productRoute , adminRoute , deleteProduct)
 
-export default router;
+export default router

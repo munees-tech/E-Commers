@@ -16,14 +16,12 @@ function App() {
   const {  getCartItem } = useCartStore();
   const { user, checkAuth, checkingAuth } = useUserStore();
   console.log(user)
-  
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);
 
   useEffect(() => {
     if(!user) return
-
     getCartItem();
   }, [getCartItem , user]);
 
