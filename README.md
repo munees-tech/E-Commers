@@ -48,10 +48,6 @@ Edit
 /server/middleware    → Auth, admin protection  
 /server/controllers   → Route controllers
 
-📦 Installation
-1. Clone the repository
-
-git clone https://github.com/your-username/ecommerce-mern.git
 cd ecommerce
 
 Backend Setup
